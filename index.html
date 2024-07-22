@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+</head>
+<body>
+    <div id="success__message">
+        <div id="icon-message">
+            <img src="./images/icon-success-check.svg" alt="check-icon">
+            <strong id="icon-text">Message Sent!</strong>
+        </div>
+        <p id="success-remark">
+            Thanks for completing the form. We will be in touch soon!
+        </p>
+    </div>
+    <div class="container">
+        <h1>Contact us</h1>
+        <form action="#">
+            <div class="first">
+                <div class="name">
+                    <label for="firstname">First Name *</label><br>
+                    <input type="firstname" name="firstname" id="firstname" required>
+                </div>
+                
+                <div class="lastname">
+                    <label for="lastname">Last Name *</label><br>
+                    <input type="lastname" name="lastname" id="lastname" required><br>
+                </div>
+            </div>
+            <label for="email">Email Address *</label><br>
+            <input type="email" name="email" id="email"><br>
+            <label for="query">Query Type *</label>
+            <div class="query">
+                <div  id="general"><input onclick="choosegeneral()" type="radio" name="query"  value="general enquiry" required>General Enquiry</div>
+                <div  id="support"><input onclick="choosesupport()" type="radio" name="query" value="support request" required>Support Request</div>
+            </div>
+            <label for="message">Message *</label><br>
+            <textarea name="" id="message" rows="10" cols="20"></textarea><br>
+            <input onclick="change()" type="checkbox" id="contact" name="contact" value="I consent" required>
+            <label id="contact" for="contact">I consent to being contacted by the team *</label><br>
+            <button type="submit" onclick="openPopup()">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
